@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card bg-light">
+            <div class="card-header">
+                <h3>{{rest.name}}</h3>
+            </div>
+                <div class="card-body">
+                    <h5 class="card-title font-weight-bold">{{rest.app_infos.address}}</h5>
+                    <p class="card-text">{{rest.app_infos.about | slice:0:100}} ...</p>
+                    <a [routerLink]="['show', rest.id]" class="btn btn-secondary">Visualizza</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="box">
+                {{rest}}
+            </div>
+        </div>
+    </div>
+</div>
+-->

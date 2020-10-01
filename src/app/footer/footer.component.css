@@ -1,0 +1,11 @@
+.bg-footer{
+    padding-top: 1%;
+    text-align: center;
+    width: 100%; 
+    background-color: whitesmoke;
+    height: 100px;
+}
+
+p, .bg{
+    background-color: whitesmoke;
+}

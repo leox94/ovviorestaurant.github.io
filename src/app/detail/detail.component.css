@@ -1,0 +1,24 @@
+h2{
+    padding-top: 2%;
+}
+
+.btn{
+    border-radius: 15px;
+    border-color: transparent;
+    background-color: grey;
+}
+
+
+hr{
+    border-color: grey;
+}
+
+.cart{
+    width: 26rem;
+    z-index: 10;
+    max-height: calc(100% - 50px);
+    overflow: auto;
+    top: 300px;
+    bottom: 40px;
+    padding-right: 10px;
+}

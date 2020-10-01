@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="offset-8 cart position-fixed">
+    <div class="card">  
+      <div class="card-body">
+        <h3>Carrello</h3>
+        
+        <hr>
+          <div *ngFor="let prod of cart">
+            <h4 class="card-title">{{prod.title}}</h4>
+            <h5 class="card-subtitle mb-2 text-muted">{{prod.reservation_items[0].price | currency:'EUR'}}</h5>
+            <br >
+          </div>
+        <h3>Totale: {{total | currency:'EUR'}}</h3>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="container-fluid box">
+    <div class="row">
+        <div class="col-8">
+          <h3 class="offset-5" *ngIf="menu.length === 0">In caricamento...</h3>
+<h2 class="offset-5 font-weight-bold">{{found.name}}</h2>
+<br >
+<h3 class="offset-5">{{found.address}}</h3>
+<br >
+<br >
+
+  <a class="offset-5 btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      INFO
+  </a>
+  <a class="offset-1 btn btn-primary btn-lg" data-toggle="collapse" href="#collapseMenu" role="button" aria-expanded="false" aria-controls="collapseMenu">
+      MENU
+  </a>
+
+  <div class="collapse" id="collapseExample">
+    <br >
+    <div class="offset-3 card card-body">
+      <h4 class="offset-1 col-8 ">{{found.description}}</h4>
+    </div>
+  </div>
+  <div class="collapse" id="collapseMenu">
+    <br >
+    <h3 class="offset-4" *ngIf="menu.length === 0">In caricamento...</h3>
+      <app-menu *ngFor="let piatti of menu" [menu]="piatti" [cart]="cart"></app-menu>
+    
+  </div>
+
+<br >
+<div>  
+    <br >
+    <br >
+    <br >
+    <br >
+    <br >
+    <h4 class="offset-5">Telefono: {{found.phone}}</h4>
+    <br >
+    <br >  
+</div>
+</div>
+</div>
+</div>
+<app-footer></app-footer>
